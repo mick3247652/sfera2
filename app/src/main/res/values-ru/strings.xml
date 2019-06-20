@@ -261,8 +261,8 @@
     <string name="page_7">Сообщения</string>
     <string name="page_8">Профиль</string>
 
-    <string name="nav_feed">Стена \u25bd</string>
-    <string name="nav_stream">Лента \u25bd</string>
+    <string name="nav_feed">Стена</string>
+    <string name="nav_stream">Лента</string>
     <string name="nav_nearby">Рядом с вами</string>
     <string name="nav_favorites">Избранное</string>
     <string name="nav_notifications">Уведомления</string>

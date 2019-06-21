@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Edit the following data -->
 
@@ -21,9 +21,11 @@
 
     <string name="google_places_api_key">AIzaSyB9yLCYr9G96pTM12PoZrrH9x6Vq6Ql770</string>
 
+    <string name="banner_ad_unit_id">ca-app-pub-9898148874069573/5129873061</string>
+    <string name="admob_app_id">ca-app-pub-9898148874069573~4199934779</string>
+    <string name="rewarded_ad_unit_id">ca-app-pub-9898148874069573/8896183093</string>
+
     <!-- Share text -->
-
-
     <string name="action_login">Вход</string>
     <string name="action_signup">Регистрация</string>
     <string name="action_logout">Выход</string>
@@ -89,7 +91,7 @@
     <string name="label_sex_male">Мужской</string>
     <string name="label_sex_female">Женский</string>
 
-    <string name="placeholder_auth">Имя пользователя или email</string>
+    <string name="placeholder_auth" tools:ignore="ExtraTranslation">Имя пользователя или email</string>
     <string name="placeholder_password">Пароль</string>
     <string name="placeholder_login">Имя пользователя</string>
     <string name="placeholder_fullname">Полное имя</string>
@@ -121,8 +123,8 @@
     <string name="msg_enter_msg">Пожалуйста, напишите что-нибудь или приложите фото</string>
     <string name="msg_gift_sent">Подарок успешно отправлен</string>
     <string name="msg_send_msg_error">Вы не можете отправить сообщение пользователю</string>
-    <string name="msg_item_posted">Сообщение успешно опубликовано</string>
-    <string name="msg_item_saved">Сообщение успешно сохранено</string>
+    <string name="msg_item_posted">Пост успешно опубликован</string>
+    <string name="msg_item_saved">Пост успешно сохранен</string>
     <string name="msg_password_changed">Пароль успешно изменен</string>
     <string name="msg_settings_saved">Настройки успешно сохранены</string>
     <string name="msg_ticket_send_success">Ваш запрос принят! Вы получите ответ на электронное письмо, которое указано в запросе</string>
@@ -260,6 +262,13 @@
     <string name="page_6">Уведомления</string>
     <string name="page_7">Сообщения</string>
     <string name="page_8">Профиль</string>
+    <string name="page_9">Мои группы</string>
+    <string name="page_10">Поиск</string>
+    <string name="page_11">Галерея</string>
+    <string name="page_12">Гости</string>
+    <string name="page_14">Upgrades</string>
+    <string name="drawer_open">Открыть</string>
+    <string name="drawer_close">Закрыть</string>
 
     <string name="nav_feed">Стена</string>
     <string name="nav_stream">Лента</string>
@@ -314,19 +323,19 @@
     <string name="label_nearby">Поблизости</string>
 
     <string name="title_dialog_nearby">Выберите расстояние</string>
+    <string name="dialog_nearby_0">80 километров</string>
+    <string name="dialog_nearby_1">160 километров</string>
+    <string name="dialog_nearby_2">400 километров</string>
+    <string name="dialog_nearby_3">800 километров</string>
+    <string name="dialog_nearby_4">1600 километров</string>
 
-    <string name="dialog_nearby_1">80 километров</string>
-    <string name="dialog_nearby_2">160 километров</string>
-    <string name="dialog_nearby_3">400 километров</string>
-    <string name="dialog_nearby_4">800 километров</string>
-
-    <string name="title_activity_nearby">Сообщения рядом с вами</string>
-    <string name="title_activity_friends">Профиль друзей</string>
+    <string name="title_activity_nearby">Кто рядом</string>
+    <string name="title_activity_friends">Друзья</string>
     <string name="title_activity_gifts">Подарки</string>
     <string name="title_activity_guests">Гости</string>
     <string name="title_activity_upgrades">Улучшения</string>
 
-    <string name="page_15">Сообщения рядом с вами</string>
+    <string name="page_15">Кто рядом</string>
 
     <string name="error_action">Этот пользователь запретил вам это делать!</string>
 
@@ -420,5 +429,320 @@
     <string name="msg_success_disable_ads">Ads turned off!</string>
 
     <string name="msg_profile_link_copied">Ссылка профиля, скопирована в буфер обмена</string>
+
+    <string name="action_share_on_wall">На стену</string>
+    <string name="action_follow">Читать</string>
+    <string name="action_unfollow">Не читать</string>
+    <string name="placeholder_repost">Ваш комментарий&#8230;</string>
+    <string name="msg_post_has_been_shared">Этому посту сделали репост ваши друзья в ленте</string>
+    <string name="msg_post_has_shared_error">Вы не можете делать репост своим постам.</string>
+    <string name="label_gcm_follower">У вас новый читатель.</string>
+    <string name="label_post_share_desc">Вы хотите опубликовать этот пост на своей стене?</string>
+    <string name="label_profile_reported">Жалоба на профиль.</string>
+    <string name="label_post_reported">Жалоба на пост.</string>
+    <string name="label_follow_you">вы читаете.</string>
+    <string name="label_post_to">В:</string>
+    <string name="label_post_to_followers">Участников</string>
+    <string name="label_post_to_public">Для всех</string>
+    <string name="label_followers">участников</string>
+    <string name="label_followings">читаемых</string>
+    <string name="settings_notifications_followers">Читателей</string>
+    <string name="title_activity_hashtags">Хештегов</string>
+    <string name="title_activity_followings">Читаемых</string>
+    <string name="title_activity_followers">Участники</string>
+    <string name="title_activity_feeds">Новости</string>
+    <string name="title_activity_likes">Люди, которым это нравится</string>
+    <string name="title_activity_pro">ProActivity</string>
+    <string name="hello_blank_fragment">Здравствуйте</string>
+    <string name="title_activity_repost">Поделиться постом</string>
+    <string name="label_delete_photo_msg">Вы хотите удалить эту фотографию?</string>
+    <string name="title_activity_new_photo">Новое фото</string>
+    <string name="title_activity_galery">Галерея</string>
+    <string name="label_photo_reported">Жалоба на фотографию.</string>
+    <string name="placeholder_photo">Комментарий к фото&#8230;</string>
+    <string name="label_photos">фотографии</string>
+
+    <string name="title_activity_group">Сообщество</string>
+    <string name="title_activity_groups">Все сообщества</string>
+    <string name="action_create_group">Создать сообщество</string>
+    <string name="label_my_groups">Мои сообщества</string>
+    <string name="label_managed_groups">Управлять сообществом</string>
+    <string name="label_groups">Сообщества</string>
+    <string name="label_group">Сообщество</string>
+    <string name="label_group_category">Тема сообщества</string>
+    <string name="label_group_name">Название</string>
+    <string name="label_group_link">Ссылка на сообщество</string>
+    <string name="label_group_desc">Описание</string>
+    <string name="label_group_location">Местоположение</string>
+    <string name="label_group_website">Сайт</string>
+    <string name="label_group_founded">Основано</string>
+    <string name="label_group_allow_posts">Все участники сообщества могут писать сообщения</string>
+    <string name="label_group_allow_comments">Все участники сообщества могут оставлять комментарии к постам</string>
+    <string name="label_group_havent_items">Сообщество не публикует посты.</string>
+    <string name="group_comments_disabled">Комментарии к постам отключены.</string>
+    <string name="label_group_search_results">Найти сообщества:</string>
+    <string name="label_group_search_start_screen_msg">Найти сообщества по имени.</string>
+    <string name="label_search_group">Поиск сообщества</string>
+
+    <string name="msg_error_group_link">Ссылка на сообщество уже занята или не соответствует формату.</string>
+
+
+    <string name="title_activity_managed_groups">Ваши сообщества</string>
+    <string name="title_activity_new_group">Новое сообщество</string>
+
+    <string name="group_category_1">Активный отдых</string>
+    <string name="group_category_2">Искусство и культура</string>
+    <string name="group_category_3">Авто/мото</string>
+    <string name="group_category_4">Красота и мода</string>
+    <string name="group_category_5">Бизнес</string>
+    <string name="group_category_6">Кино</string>
+    <string name="group_category_7">Кухня</string>
+    <string name="group_category_8">Знакомства и общение</string>
+    <string name="group_category_9">Дизайн и графика</string>
+    <string name="group_category_10">Образование</string>
+    <string name="group_category_11">Электроника и бытовая техника</string>
+    <string name="group_category_12">Развлечение</string>
+    <string name="group_category_13">Объявления</string>
+    <string name="group_category_14">Медицина</string>
+    <string name="group_category_15">Семья</string>
+    <string name="group_category_16">Финансы</string>
+    <string name="group_category_17">Еда</string>
+    <string name="group_category_18">Игры</string>
+    <string name="group_category_19">Товары и услуги</string>
+    <string name="group_category_20">Здоровье</string>
+    <string name="group_category_21">Хобби</string>
+    <string name="group_category_22">Дом и ремонт</string>
+    <string name="group_category_23">Юмор</string>
+    <string name="group_category_24">Хозяйство</string>
+    <string name="group_category_25">Страхование</string>
+    <string name="group_category_26">IT</string>
+    <string name="group_category_27">Литература</string>
+    <string name="group_category_28">Мобильные услуги и интернет</string>
+    <string name="group_category_29">Музыка</string>
+    <string name="group_category_30">Новости и СМИ</string>
+    <string name="group_category_31">Домашние животные</string>
+    <string name="group_category_32">Фотография</string>
+    <string name="group_category_33">Политика</string>
+    <string name="group_category_34">Недвижимость</string>
+    <string name="group_category_35">Садоводство</string>
+    <string name="group_category_36">Наука и техника</string>
+    <string name="group_category_37">Одежда и обувь</string>
+    <string name="group_category_38">Общество, гуманитарные науки</string>
+    <string name="group_category_39">Спорт</string>
+    <string name="group_category_40">Телевидение</string>
+    <string name="group_category_41">Путешествие</string>
+    <string name="group_category_42">Работа</string>
+
+    <string name="action_buy_iap1">Buy 30 Credits ($1)</string>
+    <string name="action_buy_iap2">Buy 70 Credits ($2)</string>
+    <string name="action_buy_iap3">Buy 120 Credits ($3)</string>
+    <string name="action_buy">Buy Credits</string>
+    <string name="action_credits_name">Credits</string>
+    <string name="placeholder_gift">Комментарий к подарку&#8230;</string>
+    <string name="title_activity_select_gift">Выбрать подарок</string>
+    <string name="title_activity_send_gift">Отправить Подарок</string>
+
+    <string name="action_buy_sms">Buy Credits with SMS</string>
+    <string name="title_activity_view_image">Изображение</string>
+    <string name="label_image_for_public">Для всех</string>
+    <string name="label_image_for_friends">Читатели</string>
+    <string name="label_likes_image">нравится ваша фотография.</string>
+    <string name="msg_comment_has_been_removed">Комментарий удален.</string>
+    <string name="settings_allow_comments_to_photos">Разрешить комментарии к моим фотографиям</string>
+    <string name="label_likes_video">нравится ваше видео.</string>
+
+    <string name="title_activity_video_gallery">Видеогалерея</string>
+    <string name="title_activity_view_video">Видео</string>
+    <string name="title_activity_new_video">Новое видео</string>
+    <string name="title_activity_video_view">Видео</string>
+    <string name="placeholder_video">Комментарий к видео&#8230;</string>
+    <string name="label_videos">видео</string>
+    <string name="label_delete_video">Удалить видео?</string>
+    <string name="label_video_reported">Жалоба на видео.</string>
+
+    <string name="msg_enter_video">Пожалуйста, выберите видео для публикации.</string>
+    <string name="action_new_item">Новый пост</string>
+    <string name="settings_privacy_info">Показывать профиль только для друзей</string>
+    <string name="settings_privacy_videos">Показывать видео только для друзей</string>
+    <string name="settings_privacy_friends">Только для друзей</string>
+    <string name="settings_privacy_photos">Показывать фотографии только друзьям</string>
+    <string name="settings_privacy_gifts">Показывать подарки только друзьям</string>
+    <string name="action_cancel_friends_request">Отменить запрос</string>
+    <string name="label_post_to_friends">Для друзей</string>
+
+    <string name="title_activity_welcome">Добро пожаловать</string>
+    <string name="title_activity_referrals">Реффералы</string>
+
+    <string name="welcome_screen_1_title">Добро пожаловать!</string>
+    <string name="welcome_screen_2_title">Фото и видео</string>
+    <string name="welcome_screen_3_title">Кто рядом</string>
+    <string name="welcome_screen_4_title">Спасибо!</string>
+
+    <string name="welcome_screen_1_desc">Регистрация успешно завершена!</string>
+    <string name="welcome_screen_2_desc">Поделитесь фотографиями и видео!</string>
+    <string name="welcome_screen_3_desc">Найти друзей поблизости</string>
+    <string name="welcome_screen_4_desc">Спасибо, что выбрали нас!</string>
+
+    <string name="action_next">Вперед</string>
+    <string name="action_finish">Завершено</string>
+    <string name="action_skip">Пропустить</string>
+
+    <string name="label_signup_invite">ID пользователя, который пригласил вас (необязательно)</string>
+    <string name="label_user_id">ID пользователя</string>
+
+    <string name="settings_view_referrals_list">Реффералы</string>
+
+    <string name="label_referrals_id">You User Id:</string>
+    <string name="label_referrals_hint">Invite your friends and get Credits!</string>
+    <string name="label_referrals_hint2">Referrals are people who registered at your invitation.</string>
+    <string name="page_16">Market</string>
+    <string name="title_activity_market">Market</string>
+    <string name="title_activity_market_new_item">Новый пост</string>
+    <string name="title_activity_market_view_item">View Item</string>
+    <string name="title_activity_market_my_items">My Items</string>
+
+    <string name="action_market_my_items">Show My Items</string>
+
+    <string name="label_currency">$</string>
+    <string name="label_market_search_start_screen_msg">Find Items by title, content or description.</string>
+    <string name="label_view_author_profile">View Profile</string>
+    <string name="label_item_delete_msg">Do you want to delete this Item?</string>
+    <string name="label_item_price_placeholder">Price</string>
+    <string name="label_market_results_error">No items found</string>
+    <string name="label_market_search_results">Find items:</string>
+    <string name="msg_item_select_price">Enter your price!</string>
+    <string name="label_chat_media">Медиа</string>
+    <string name="label_chat_stickers">Стикеры</string>
+
+    <string name="channel_name">Скачать СФЕРА https://play.google.com/store/apps/details?id=ru.club.sfera</string>
+    <string name="title_activity_view_youtube_video">YouTube видео</string>
+    <string name="youtube_player_error">Error initializing YouTube player: %s</string>
+    <string name="label_only_with_photo">Only with photo</string>
+    <string name="label_additional">Additional</string>
+    <string name="title_dialog_nearby_sex">Выбрать пол</string>
+    <string name="label_gender_any">Any</string>
+    <string name="action_nearby_sex_settings">Выбрать пол</string>
+
+    <string name="label_multi_account_msg">You can not create multi-accounts!</string>
+    <string name="label_updated_profile_photo">updated profile photo.</string>
+    <string name="label_updated_cover_photo">updated cover image.</string>
+
+    <string name="msg_success_rewarded">Congratulations! The reward for viewing advertising is credited to your balance!</string>
+
+    <string name="action_view_rewarded_video_ad">Get rewards for viewing ads</string>
+
+    <string name="action_profile_edit_feeling">Set Mood</string>
+    <string name="title_activity_feelings">Feelings</string>
+    <string name="label_item_feeling">is feeling</string>
+    <string name="label_feeling">Feeling</string>
+    <string name="action_select_feeling">Select Feeling</string>
+
+    <string name="msg_system_post">You can not edit standard posts created by the system</string>
+
+    <string name="tab_feed">Новости</string>
+    <string name="tab_groups">Сообщества</string>
+    <string name="tab_managed_groups">Управляемые сообщества</string>
+    <string name="tab_profile">Профиль</string>
+    <string name="tab_notifications">Уведомления</string>
+    <string name="tab_messages">Сообщения</string>
+    <string name="tab_menu">Меню</string>
+    <string name="tab_upgrades">Upgrades</string>
+    <string name="tab_favorites">Избранное</string>
+    <string name="tab_guests">Гости</string>
+    <string name="tab_friends">Друзья</string>
+    <string name="tab_gallery">Галерея</string>
+    <string name="tab_nearby">Рядом с вами</string>
+    <string name="tab_stream">Лента</string>
+    <string name="tab_settings">Настройки</string>
+    <string name="tab_market">Маркет</string>
+    <string name="tab_my_products">My Products</string>
+    <string name="tab_popular">Популярное</string>
+
+    <string name="nav_groups">@string/tab_groups</string>
+    <string name="nav_managed_groups">@string/tab_managed_groups</string>
+    <string name="nav_menu">@string/tab_menu</string>
+    <string name="nav_upgrades">@string/tab_upgrades</string>
+    <string name="nav_gallery">@string/tab_gallery</string>
+    <string name="nav_market">@string/tab_market</string>
+    <string name="nav_my_products">@string/tab_my_products</string>
+    <string name="nav_popular">@string/tab_popular</string>
+    <string name="title_activity_stream">Лента</string>
+    <string name="title_activity_popular">Популярное</string>
+
+    <string name="placeholder_toolbar_search">Поиск</string>
+
+    <string name="label_messenger">Мессенджер</string>
+
+    <string name="action_profile_more">Ещё</string>
+    <string name="action_group_join">Присоединиться к сообществу</string>
+    <string name="action_group_leave">Покинуть сообщество</string>
+
+    <string name="msg_action_logout">Вы уверены, что хотите выйти?</string>
+    <string name="msg_new_item_promo">%s, что вы думаете? Поделитесь своими мыслями!</string>
+    <string name="msg_new_item_promo_2">Создайте новый пост прямо сейчас! Поделитесь своими мыслями, впечатлениями и фотографиями!</string>
+    <string name="msg_search_friends_promo">%s, посмотрите, кто рядом с вами! Найдите своих друзей прямо сейчас!</string>
+
+    <string name="label_feed_desc">Новости от ваших друзей и сообществ.</string>
+    <string name="label_friends_desc">Все ваши друзья.</string>
+    <string name="action_back">Назад</string>
+    <string name="action_choose_photo">Выберите фото</string>
+    <string name="action_choose_age">Возраст</string>
+    <string name="action_choose_gender">Пол</string>
+    <string name="action_grant_access">Предоставить доступ</string>
+    <string name="action_grant_access_success">Доступ предоставлен</string>
+    <string name="action_get_balance">Buy credits</string>
+
+    <string name="register_screen_2_msg">Пожалуйста, выберите фотографию для вашего профиля.</string>
+    <string name="register_screen_2_title">Ваша фотография</string>
+    <string name="register_screen_2_subtitle">Будьте внимательны при выборе фотографии!</string>
+
+    <string name="register_screen_3_msg">Укажите пол и возраст.</string>
+    <string name="register_screen_3_title">Пол и возраст</string>
+    <string name="register_screen_3_subtitle">Укажите пол</string>
+
+    <string name="register_screen_4_title">Кто рядом</string>
+    <string name="register_screen_4_subtitle">Для доступа к некоторым функциям, приложению требуется разрешение на использование вашего местоположения.</string>
+
+    <string name="label_secret">Secret</string>
+    <string name="label_unknown">Unknown</string>
+    <string name="label_sex_secret">Gender is Secret</string>
+    <string name="label_sex_unknown">Gender is Unknown</string>
+
+    <string name="label_register_terms">Нажав продолжить, Вы соглашаетесь с нашим</string>
+
+    <string name="msg_account_deactivated">Эта учетная запись отключена пользователем.</string>
+
+    <string name="dlg_delete_location_title">Местоположение</string>
+    <string name="dlg_delete_location_subtitle">Удалить местоположение?</string>
+
+    <string name="dlg_delete_feeling_title">Эмоции</string>
+    <string name="dlg_choice_image_title">Выбор изображения</string>
+    <string name="dlg_choice_gift_title">Подарки</string>
+    <string name="dlg_choice_feeling_title">Эмоции</string>
+
+    <string name="title_edit_item">Редактировать пост</string>
+    <string name="title_new_item">Новый пост</string>
+
+    <string name="action_add_location">Добавить местоположение</string>
+    <string name="action_add_image">Добавить Изображение / Фото</string>
+    <string name="action_add_video">Добавить видео</string>
+    <string name="action_add_feeling">Добавить эмоции</string>
+
+    <string name="action_view_repost">Показать репост</string>
+
+    <string name="image_of">%1$d of %2$d</string>
+    <string name="price_of">%d credits</string>
+    <string name="images_limit_of">You have reached the limit. No more than %d images per post.</string>
+    <string name="video_limit_of">You have reached the limit. No more than %d video files per post.</string>
+    <string name="account_balance_label">You balance %d credits</string>
+
+    <string name="label_empty_comments_list">Комментариев пока нет.</string>
+
+    <string name="label_profile_photo_rejected_new">%s rejected you profile photo. Upload/change profile photo.</string>
+    <string name="label_profile_cover_rejected_new">%s rejected you profile cover. Upload/change profile cover.</string>
+
+    <string name="label_gcm_profile_photo_reject">Фотография профиля отклоняется.</string>
+    <string name="label_gcm_profile_cover_reject">Обложка профиля отклоняется.</string>
+    <string name="placeholder_post">Что вы хотите написать?</string>
 
 </resources>

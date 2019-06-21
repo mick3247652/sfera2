@@ -706,10 +706,10 @@ public class Api extends Application implements Constants {
         }
 
         String header = "Скачать " + (String) context.getString(R.string.app_name) + "\n";
-        header += "https://play.google.com/store/apps/details?id=ru.club.sfera" + "\n";
+        header += "https://play.google.com/store/apps/details?id=ru.club.sfera" + "\n\n";
 
-        shareIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, header);
-        shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareText);
+        //shareIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, header);
+        shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, header + shareText);
 
         Log.e("Share","Share without Image");
 

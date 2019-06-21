@@ -538,7 +538,15 @@ public class StreamFragment extends Fragment implements Constants, SwipeRefreshL
                 mBottomSheetDialog.dismiss();
 
                 ClipboardManager clipboard = (ClipboardManager) getActivity().getSystemService(getActivity().CLIPBOARD_SERVICE);
-                ClipData clip = ClipData.newPlainText("post url", item.getLink());
+
+
+                String header = "Скачать " + (String) view.getContext().getString(R.string.app_name) + "\n";
+                header += "https://play.google.com/store/apps/details?id=ru.club.sfera" + "\n\n";
+                header += item.getLink();
+
+
+                ClipData clip = ClipData.newPlainText("post url", header);
+                //ClipData clip = ClipData.newPlainText("post url", item.getLink());
                 clipboard.setPrimaryClip(clip);
 
                 Toast.makeText(getActivity(), getText(R.string.msg_post_link_copied), Toast.LENGTH_SHORT).show();
@@ -552,9 +560,16 @@ public class StreamFragment extends Fragment implements Constants, SwipeRefreshL
 
                 mBottomSheetDialog.dismiss();
 
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(item.getLink()));
+
+                String link = "https://play.google.com/store/apps/details?id=ru.club.sfera";
+                Intent i = new Intent(view.getContext(), WebViewActivity.class);
+                i.putExtra("url", link);
+                i.putExtra("title", "SFERA");
                 startActivity(i);
+
+                //Intent i = new Intent(Intent.ACTION_VIEW);
+                //i.setData(Uri.parse(item.getLink()));
+                //startActivity(i);
             }
         });
 

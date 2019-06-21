@@ -535,6 +535,7 @@ public class AdvancedItemListAdapter extends RecyclerView.Adapter<AdvancedItemLi
 
         } else if (p.getYouTubeVideoUrl() != null && p.getYouTubeVideoUrl().length() != 0) {
 
+            holder.mVideoLayout.setVisibility(View.VISIBLE);
             holder.mVideoImg.setVisibility(View.VISIBLE);
             holder.mVideoProgressBar.setVisibility(View.VISIBLE);
 
@@ -1213,6 +1214,7 @@ public class AdvancedItemListAdapter extends RecyclerView.Adapter<AdvancedItemLi
 
             holder.mCardRepostContainer.setVisibility(View.GONE);
         }
+        Log.v("Hello","Hello");
     }
 
     private void onItemMenuButtonClick(final View view, final Item post, final int position){

@@ -354,7 +354,7 @@
                 <github.ankushsachdeva.emojicon.EmojiconTextView
                     emojicon:emojiconSize="24dp"
                     android:fontFamily="sans-serif-light"
-                    android:linksClickable="true"
+                    android:linksClickable="false"
                     android:autoLink="web"
                     android:textColorLink="#5BCFF2"
                     android:textColor="@color/black"

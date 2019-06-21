@@ -18,6 +18,7 @@ import android.text.Editable;
 import android.text.Html;
 import android.text.TextWatcher;
 import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -56,6 +57,7 @@ import java.util.Map;
 
 import github.ankushsachdeva.emojicon.EmojiconEditText;
 import github.ankushsachdeva.emojicon.EmojiconTextView;
+import me.saket.bettermovementmethod.BetterLinkMovementMethod;
 import ru.club.sfera.GroupActivity;
 import ru.club.sfera.HashtagsActivity;
 import ru.club.sfera.LikesActivity;
@@ -64,6 +66,7 @@ import ru.club.sfera.ProfileActivity;
 import ru.club.sfera.R;
 import ru.club.sfera.ViewItemActivity;
 import ru.club.sfera.ViewYouTubeVideoActivity;
+import ru.club.sfera.WebViewActivity;
 import ru.club.sfera.app.App;
 import ru.club.sfera.constants.Constants;
 import ru.club.sfera.model.Comment;
@@ -203,6 +206,8 @@ public class AdvancedItemListAdapter extends RecyclerView.Adapter<AdvancedItemLi
                 mVideoProgressBar = (ProgressBar) v.findViewById(R.id.video_progress_bar);
 
                 mItemDescription = (EmojiconTextView) v.findViewById(R.id.itemDescription);
+
+
 
 
                 mItemMenuButton = (ImageView) v.findViewById(R.id.itemMenuButton);
@@ -615,7 +620,21 @@ public class AdvancedItemListAdapter extends RecyclerView.Adapter<AdvancedItemLi
                 holder.mItemDescription.setVisibility(View.VISIBLE);
                 holder.mItemDescription.setText(p.getPost().replaceAll("<br>", "\n"));
 
-                holder.mItemDescription.setMovementMethod(LinkMovementMethod.getInstance());
+                //holder.mItemDescription.setMovementMethod(LinkMovementMethod.getInstance());
+                BetterLinkMovementMethod
+                        .linkify(Linkify.WEB_URLS, holder.mItemDescription)
+                        .setOnLinkClickListener((textView, url) -> {
+                            Intent i = new Intent(holder.mItemDescription.getContext(), WebViewActivity.class);
+                            i.putExtra("url", url);
+                            i.putExtra("title", "SFERA");
+                            holder.mItemDescription.getContext().startActivity(i);
+
+                            return true;
+                        })
+                        .setOnLinkLongClickListener((textView, url) -> {
+                            // Handle long-clicks.
+                            return true;
+                        });
 
                 String textHtml = p.getPost();
 

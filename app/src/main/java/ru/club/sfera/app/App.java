@@ -440,8 +440,8 @@ public class App extends Application implements Constants {
                 this.setCoverUrl(accountObj.getString("coverUrl"));
 
                 if (accountObj.has("photoModerateUrl")) {
-
-                    this.setPhotoUrl(accountObj.getString("photoModerateUrl"));
+                    String url = accountObj.getString("photoModerateUrl");
+                    if(url != null && url.length() > 0) this.setPhotoUrl(url);
                 }
 
                 if (accountObj.has("coverModerateUrl")) {

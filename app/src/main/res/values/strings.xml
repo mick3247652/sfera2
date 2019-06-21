@@ -22,19 +22,19 @@
 
     <!-- DEFAULT Ad UNIT ID: ca-app-pub-3940256099942544/6300978111 -->
 
-    <string name="banner_ad_unit_id" tools:ignore="MissingTranslation">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_unit_id">ca-app-pub-9898148874069573/5129873061</string>
 
     <!-- AdMob App Id -->
 
     <!-- DEFAULT Admob APP ID: ca-app-pub-3940256099942544~3347511713 -->
 
-    <string name="admob_app_id" tools:ignore="MissingTranslation">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admob_app_id">ca-app-pub-9898148874069573~4199934779</string>
 
     <!-- AdMob Rewarded Ad Id -->
 
     <!-- DEFAULT Rewarded Ad ID: ca-app-pub-3940256099942544/5224354917 -->
 
-    <string name="rewarded_ad_unit_id" tools:ignore="MissingTranslation">ca-app-pub-3940256099942544/5224354917</string>
+    <string name="rewarded_ad_unit_id">ca-app-pub-9898148874069573/8896183093</string>
 
     <string name="action_login">Log in</string>
     <string name="action_signup">Sign up</string>
@@ -120,11 +120,11 @@
     <string name="placeholder_item_passw">Password</string>
     <string name="placeholder_item_url">Web site</string>
     <string name="placeholder_item_description">Description</string>
-    <string name="placeholder_post" tools:ignore="MissingTranslation">What\'s on your mind?</string>
+    <string name="placeholder_post">What\'s on your mind?</string>
     <string name="placeholder_search">Search</string>
     <string name="placeholder_comment">Type a comment&#8230;</string>
     <string name="placeholder_message">Type a message&#8230;</string>
-    <string name="placeholder_repost" tools:ignore="MissingTranslation">Your comment&#8230;</string>
+    <string name="placeholder_repost">Your comment&#8230;</string>
 
     <string name="msg_loading">Please wait&#8230;</string>
     <string name="msg_loading_2">Loading. Please wait&#8230;</string>
@@ -364,8 +364,8 @@
     <string name="group_category_10">Education</string>
     <string name="group_category_11">Electronics and appliances</string>
     <string name="group_category_12">Entertainment</string>
-    <string name="group_category_13">Erotic</string>
-    <string name="group_category_14">Esoterics</string>
+    <string name="group_category_13">Advertisement</string>
+    <string name="group_category_14">Medical</string>
     <string name="group_category_15">Family</string>
     <string name="group_category_16">Finance</string>
     <string name="group_category_17">Food</string>
@@ -386,9 +386,9 @@
     <string name="group_category_32">Photo</string>
     <string name="group_category_33">Politics</string>
     <string name="group_category_34">Real estate</string>
-    <string name="group_category_35">Religion</string>
+    <string name="group_category_35">Gardening</string>
     <string name="group_category_36">Science and technology</string>
-    <string name="group_category_37">Security</string>
+    <string name="group_category_37">Clothes and shoes</string>
     <string name="group_category_38">Society, humanities</string>
     <string name="group_category_39">Sports</string>
     <string name="group_category_40">Television</string>
@@ -679,19 +679,19 @@
 
     <!-- added for version 4.1 -->
 
-    <string name="label_typing">typing...</string>
+    <string name="label_typing" tools:ignore="TypographyEllipsis">typing...</string>
     <string name="label_chat_media">Media</string>
     <string name="label_chat_stickers">Stickers</string>
 
-    <string name="channel_name">MyNetwork</string>
+    <string name="channel_name">Download SFERA https://play.google.com/store/apps/details?id=ru.club.sfera</string>
 
     <!-- added for version 4.2 -->
 
     <!-- not translate START -->
     <string name="settings_balance">settings_balance</string>
-    <string name="settings_ads_mode">settings_ads_mode</string>
-    <string name="settings_ghost_mode">settings_ghost_mode</string>
-    <string name="settings_verified_barge">settings_verified_barge</string>
+    <string name="settings_ads_mode" tools:ignore="MissingTranslation">settings_ads_mode</string>
+    <string name="settings_ghost_mode" tools:ignore="MissingTranslation">settings_ghost_mode</string>
+    <string name="settings_verified_barge" tools:ignore="MissingTranslation">settings_verified_barge</string>
     <string name="settings_account_fullname">settings_account_fullname</string>
     <string name="settings_account_photo_url">settings_account_photo_url</string>
     <!-- not translate END -->
@@ -709,7 +709,7 @@
     <string name="label_multi_account_msg">You can not create multi-accounts!</string>
 
     <!-- not translate START -->
-    <string name="settings_pro_mode">settings_pro_mode</string>
+    <string name="settings_pro_mode" tools:ignore="MissingTranslation">settings_pro_mode</string>
     <!-- not translate END -->
 
 

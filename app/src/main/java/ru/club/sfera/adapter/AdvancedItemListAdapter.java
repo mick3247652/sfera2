@@ -1126,7 +1126,21 @@ public class AdvancedItemListAdapter extends RecyclerView.Adapter<AdvancedItemLi
                     holder.mReDescription.setVisibility(View.VISIBLE);
                     holder.mReDescription.setText(p.getRePostPost().replaceAll("<br>", "\n"));
 
-                    holder.mReDescription.setMovementMethod(LinkMovementMethod.getInstance());
+                    //holder.mReDescription.setMovementMethod(LinkMovementMethod.getInstance());
+                    BetterLinkMovementMethod
+                            .linkify(Linkify.WEB_URLS, holder.mReDescription)
+                            .setOnLinkClickListener((textView, url) -> {
+                                Intent i = new Intent(holder.mReDescription.getContext(), WebViewActivity.class);
+                                i.putExtra("url", url);
+                                i.putExtra("title", "SFERA");
+                                holder.mReDescription.getContext().startActivity(i);
+
+                                return true;
+                            })
+                            .setOnLinkLongClickListener((textView, url) -> {
+                                // Handle long-clicks.
+                                return true;
+                            });
 
                     String textHtml = p.getRePostPost();
 

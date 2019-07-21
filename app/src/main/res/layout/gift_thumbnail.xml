@@ -47,14 +47,15 @@
                         android:layout_centerVertical="true" />
                 </RelativeLayout>
 
-                <TextView
+                <!--<TextView
                     android:id="@+id/price_label"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:gravity="center"
+                    android:text="3 Credits"
                     android:textColor="@color/grey_90"
-                    android:text="3 Credits"/>
+                    android:visibility="gone" />-->
 
             </RelativeLayout>
 

@@ -45,7 +45,8 @@
                     android:text="Subtitle"
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                     android:textColor="@color/grey_90"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="gone" />
 
             </LinearLayout>
 
@@ -53,16 +54,17 @@
                 android:id="@+id/balance_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_primary"
                 android:enabled="true"
                 android:gravity="center"
                 android:minWidth="0dp"
-                android:background="@drawable/button_primary"
-                android:stateListAnimator="@null"
-                android:textColor="@color/white"
-                android:textStyle="bold"
                 android:paddingLeft="@dimen/spacing_large"
                 android:paddingRight="@dimen/spacing_large"
-                android:text="@string/action_get_balance" />
+                android:stateListAnimator="@null"
+                android:text="@string/action_get_balance"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:visibility="gone" />
 
         </LinearLayout>
 

@@ -29,7 +29,7 @@ public class GiftsListAdapter extends RecyclerView.Adapter<GiftsListAdapter.MyVi
 	public class MyViewHolder extends RecyclerView.ViewHolder {
 
 		public ImageView mImage;
-		public TextView mPriceLabel;
+		//public TextView mPriceLabel;
 		public MaterialRippleLayout mParent;
 		public ProgressBar mProgressBar;
 
@@ -40,7 +40,7 @@ public class GiftsListAdapter extends RecyclerView.Adapter<GiftsListAdapter.MyVi
 			mParent = (MaterialRippleLayout) view.findViewById(R.id.parent);
 
 			mImage = (ImageView) view.findViewById(R.id.image);
-			mPriceLabel = (TextView) view.findViewById(R.id.price_label);
+			//mPriceLabel = (TextView) view.findViewById(R.id.price_label);
 			mProgressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
 		}
 	}
@@ -78,12 +78,12 @@ public class GiftsListAdapter extends RecyclerView.Adapter<GiftsListAdapter.MyVi
 
 		holder.mProgressBar.setVisibility(View.VISIBLE);
 		holder.mImage.setVisibility(View.GONE);
-		holder.mPriceLabel.setVisibility(View.GONE);
+		//holder.mPriceLabel.setVisibility(View.GONE);
 
 		if (item.getImgUrl() != null && item.getImgUrl().length() > 0) {
 
 			final ImageView img = holder.mImage;
-			final TextView price = holder.mPriceLabel;
+			//final TextView price = holder.mPriceLabel;
 			final ProgressBar progressView = holder.mProgressBar;
 
 			Picasso.with(mContext)
@@ -95,7 +95,7 @@ public class GiftsListAdapter extends RecyclerView.Adapter<GiftsListAdapter.MyVi
 
 							progressView.setVisibility(View.GONE);
 							img.setVisibility(View.VISIBLE);
-							price.setVisibility(View.VISIBLE);
+							//price.setVisibility(View.VISIBLE);
 						}
 
 						@Override
@@ -104,7 +104,7 @@ public class GiftsListAdapter extends RecyclerView.Adapter<GiftsListAdapter.MyVi
 							progressView.setVisibility(View.GONE);
 							img.setVisibility(View.VISIBLE);
 							img.setImageResource(R.drawable.img_loading);
-							price.setVisibility(View.VISIBLE);
+							//price.setVisibility(View.VISIBLE);
 						}
 					});
 
@@ -112,12 +112,12 @@ public class GiftsListAdapter extends RecyclerView.Adapter<GiftsListAdapter.MyVi
 
 			holder.mProgressBar.setVisibility(View.GONE);
 			holder.mImage.setVisibility(View.VISIBLE);
-			holder.mPriceLabel.setVisibility(View.VISIBLE);
+			//holder.mPriceLabel.setVisibility(View.VISIBLE);
 
 			holder.mImage.setImageResource(R.drawable.ic_feeling_none);
 		}
 
-		holder.mPriceLabel.setText(String.format(Locale.getDefault(), mContext.getString(R.string.price_of), item.getCost()));
+		//holder.mPriceLabel.setText(String.format(Locale.getDefault(), mContext.getString(R.string.price_of), item.getCost()));
 
 		holder.mParent.setOnClickListener(new View.OnClickListener() {
 

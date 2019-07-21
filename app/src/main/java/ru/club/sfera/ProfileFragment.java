@@ -2769,19 +2769,19 @@ public class ProfileFragment extends Fragment implements Constants, SwipeRefresh
         MaterialRippleLayout mRefreshButton = (MaterialRippleLayout) view.findViewById(R.id.refresh_button);
         MaterialRippleLayout mEditButton = (MaterialRippleLayout) view.findViewById(R.id.edit_button);
         MaterialRippleLayout mGiftButton = (MaterialRippleLayout) view.findViewById(R.id.gift_button);
-        MaterialRippleLayout mOpenUrlButton = (MaterialRippleLayout) view.findViewById(R.id.open_url_button);
-        MaterialRippleLayout mCopyUrlButton = (MaterialRippleLayout) view.findViewById(R.id.copy_url_button);
+        //MaterialRippleLayout mOpenUrlButton = (MaterialRippleLayout) view.findViewById(R.id.open_url_button);
+        //MaterialRippleLayout mCopyUrlButton = (MaterialRippleLayout) view.findViewById(R.id.copy_url_button);
         MaterialRippleLayout mReportButton = (MaterialRippleLayout) view.findViewById(R.id.report_button);
 
         MaterialRippleLayout mBlockButton = (MaterialRippleLayout) view.findViewById(R.id.block_button);
         ImageView mBlockIcon = (ImageView) view.findViewById(R.id.block_icon);
         TextView mBlockTitle = (TextView) view.findViewById(R.id.block_label);
 
-        if (!WEB_SITE_AVAILABLE) {
+        /*if (!WEB_SITE_AVAILABLE) {
 
             mOpenUrlButton.setVisibility(View.GONE);
             mCopyUrlButton.setVisibility(View.GONE);
-        }
+        }*/
 
         if (App.getInstance().getId() == profile.getId()) {
 
@@ -2875,7 +2875,7 @@ public class ProfileFragment extends Fragment implements Constants, SwipeRefresh
             }
         });
 
-        mCopyUrlButton.setOnClickListener(new View.OnClickListener() {
+        /*mCopyUrlButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -2900,7 +2900,7 @@ public class ProfileFragment extends Fragment implements Constants, SwipeRefresh
                 i.setData(Uri.parse(API_DOMAIN + profile.getUsername()));
                 startActivity(i);
             }
-        });
+        });*/
 
 
         mBottomSheetDialog = new BottomSheetDialog(getActivity());
@@ -3053,14 +3053,14 @@ public class ProfileFragment extends Fragment implements Constants, SwipeRefresh
         MaterialRippleLayout mShareButton = (MaterialRippleLayout) view.findViewById(R.id.share_button);
         MaterialRippleLayout mRepostButton = (MaterialRippleLayout) view.findViewById(R.id.repost_button);
         MaterialRippleLayout mReportButton = (MaterialRippleLayout) view.findViewById(R.id.report_button);
-        MaterialRippleLayout mOpenUrlButton = (MaterialRippleLayout) view.findViewById(R.id.open_url_button);
-        MaterialRippleLayout mCopyUrlButton = (MaterialRippleLayout) view.findViewById(R.id.copy_url_button);
+        //MaterialRippleLayout mOpenUrlButton = (MaterialRippleLayout) view.findViewById(R.id.open_url_button);
+        //MaterialRippleLayout mCopyUrlButton = (MaterialRippleLayout) view.findViewById(R.id.copy_url_button);
 
-        if (!WEB_SITE_AVAILABLE) {
+        /*if (!WEB_SITE_AVAILABLE) {
 
             mOpenUrlButton.setVisibility(View.GONE);
             mCopyUrlButton.setVisibility(View.GONE);
-        }
+        }*/
 
         final Item item = itemsList.get(position);
 
@@ -3145,7 +3145,7 @@ public class ProfileFragment extends Fragment implements Constants, SwipeRefresh
             }
         });
 
-        mCopyUrlButton.setOnClickListener(new View.OnClickListener() {
+        /*mCopyUrlButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -3170,7 +3170,7 @@ public class ProfileFragment extends Fragment implements Constants, SwipeRefresh
                 i.setData(Uri.parse(item.getLink()));
                 startActivity(i);
             }
-        });
+        });*/
 
         mBottomSheetDialog = new BottomSheetDialog(getActivity());
 

@@ -58,7 +58,7 @@ public class PostActionDialog extends DialogFragment implements Constants {
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1);
         arrayAdapter.add(getString(R.string.action_report));
         arrayAdapter.add(getString(R.string.action_share));
-        arrayAdapter.add(getString(R.string.action_copy_url));
+        //arrayAdapter.add(getString(R.string.action_copy_url));
 
         builderSingle.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
 

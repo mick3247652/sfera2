@@ -188,7 +188,7 @@
 
     </com.balysv.materialripple.MaterialRippleLayout>
 
-    <com.balysv.materialripple.MaterialRippleLayout
+    <!--<com.balysv.materialripple.MaterialRippleLayout
         style="@style/RippleStyleBlack"
         android:id="@+id/copy_url_button"
         android:layout_width="match_parent"
@@ -256,6 +256,6 @@
 
         </LinearLayout>
 
-    </com.balysv.materialripple.MaterialRippleLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>-->
 
 </LinearLayout>

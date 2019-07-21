@@ -420,13 +420,13 @@ public class FavoritesFragment extends Fragment implements Constants, SwipeRefre
         MaterialRippleLayout mShareButton = (MaterialRippleLayout) view.findViewById(R.id.share_button);
         MaterialRippleLayout mRepostButton = (MaterialRippleLayout) view.findViewById(R.id.repost_button);
         MaterialRippleLayout mReportButton = (MaterialRippleLayout) view.findViewById(R.id.report_button);
-        MaterialRippleLayout mOpenUrlButton = (MaterialRippleLayout) view.findViewById(R.id.open_url_button);
-        MaterialRippleLayout mCopyUrlButton = (MaterialRippleLayout) view.findViewById(R.id.copy_url_button);
+        //MaterialRippleLayout mOpenUrlButton = (MaterialRippleLayout) view.findViewById(R.id.open_url_button);
+        //MaterialRippleLayout mCopyUrlButton = (MaterialRippleLayout) view.findViewById(R.id.copy_url_button);
 
         if (!WEB_SITE_AVAILABLE) {
 
-            mOpenUrlButton.setVisibility(View.GONE);
-            mCopyUrlButton.setVisibility(View.GONE);
+            //mOpenUrlButton.setVisibility(View.GONE);
+            //mCopyUrlButton.setVisibility(View.GONE);
         }
 
         final Item item = itemsList.get(position);
@@ -512,7 +512,7 @@ public class FavoritesFragment extends Fragment implements Constants, SwipeRefre
             }
         });
 
-        mCopyUrlButton.setOnClickListener(new View.OnClickListener() {
+        /*mCopyUrlButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -537,7 +537,7 @@ public class FavoritesFragment extends Fragment implements Constants, SwipeRefre
                 i.setData(Uri.parse(item.getLink()));
                 startActivity(i);
             }
-        });
+        });*/
 
         mBottomSheetDialog = new BottomSheetDialog(getActivity());
 

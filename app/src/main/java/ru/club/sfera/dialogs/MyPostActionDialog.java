@@ -60,7 +60,7 @@ public class MyPostActionDialog extends DialogFragment implements Constants {
         arrayAdapter.add(getString(R.string.action_remove));
         arrayAdapter.add(getString(R.string.action_edit));
         arrayAdapter.add(getString(R.string.action_share));
-        arrayAdapter.add(getString(R.string.action_copy_url));
+        //arrayAdapter.add(getString(R.string.action_copy_url));
 
         builderSingle.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
 

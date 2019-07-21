@@ -14,6 +14,7 @@ import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.Html;
 import android.text.TextWatcher;
@@ -65,6 +66,8 @@ import ru.club.sfera.MediaViewerActivity;
 import ru.club.sfera.ProfileActivity;
 import ru.club.sfera.R;
 import ru.club.sfera.ViewItemActivity;
+import ru.club.sfera.ViewVideoActivity;
+import ru.club.sfera.ViewVideoURLActivity;
 import ru.club.sfera.ViewYouTubeVideoActivity;
 import ru.club.sfera.WebViewActivity;
 import ru.club.sfera.app.App;
@@ -605,7 +608,7 @@ public class AdvancedItemListAdapter extends RecyclerView.Adapter<AdvancedItemLi
 
                 if (p.getVideoUrl().length() != 0) {
 
-                    viewItem(p);
+                    viewVideoItem(p);
 
                 } else {
 
@@ -1251,6 +1254,15 @@ public class AdvancedItemListAdapter extends RecyclerView.Adapter<AdvancedItemLi
 
         Intent intent = new Intent(context, ViewItemActivity.class);
         intent.putExtra("itemId", item.getId());
+        intent.putExtra("videoURL", item.getVideoUrl());
+        context.startActivity(intent);
+    }
+
+    public void viewVideoItem(Item item) {
+
+        Intent intent = new Intent(context, ViewVideoURLActivity.class);
+        intent.putExtra("itemId", item.getId());
+        intent.putExtra("videoURL", item.getVideoUrl());
         context.startActivity(intent);
     }
 
@@ -1317,6 +1329,25 @@ public class AdvancedItemListAdapter extends RecyclerView.Adapter<AdvancedItemLi
         dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
         dialog.setContentView(R.layout.dialog_comments);
         dialog.setCancelable(true);
+/*
+        Toolbar toolbar = (Toolbar) dialog.findViewById(R.id.commentToolbar);
+        toolbar.setTitle("SFERA");
+        toolbar.setNavigationIcon(dialog.getContext().getResources().getDrawable(R.drawable.ic_action_back));
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+*/
+        ImageView backButton = (ImageView) dialog.findViewById(R.id.backButton);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
 
         final LinearLayout mItemInfoContainer = (LinearLayout) dialog.findViewById(R.id.item_info_container);
         mItemInfoContainer.setVisibility(View.GONE);

@@ -17,62 +17,58 @@
 
     <uses-feature android:name="android.hardware.location.gps" />
 
-    <!-- android:largeHeap="true" -->
-
     <application
-        android:usesCleartextTraffic="true"
-        android:name="ru.club.sfera.app.App"
+        android:name=".app.App"
         android:allowBackup="true"
-        android:largeHeap="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/MyMaterialTheme">
-
+        android:largeHeap="true"
+        android:theme="@style/MyMaterialTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ViewVideoURLActivity"></activity>
         <!-- AdMob App ID -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/admob_app_id"/>
+            android:value="@string/admob_app_id" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.provider"
             android:exported="false"
             android:grantUriPermissions="true">
-
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths"/>
-
+                android:resource="@xml/provider_paths" />
         </provider>
 
         <meta-data
             android:name="android.app.default_searchable"
             android:value="ru.ifsoft.network.SearchActivity" />
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
 
-        <meta-data android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id"/>
-
-        <activity android:name="com.facebook.FacebookActivity"
-            android:configChanges=
-                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name" />
         <activity
             android:name="com.facebook.CustomTabActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="ru.club.sfera.AppActivity"
+            android:name=".AppActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
@@ -82,7 +78,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
@@ -91,267 +86,250 @@
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/ic_action_push_notification" />
-
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
-
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="@string/default_notification_channel_id" />
 
-        <service
-            android:name="ru.club.sfera.service.MyFcmListenerService">
+        <service android:name=".service.MyFcmListenerService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
         <service
-            android:name="ru.club.sfera.service.MyService"
+            android:name=".service.MyService"
             android:exported="false" />
 
         <activity
-            android:name="ru.club.sfera.LoginActivity"
+            android:name=".LoginActivity"
             android:label="@string/title_activity_login"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="ru.club.sfera.SignupActivity"
+            android:name=".SignupActivity"
             android:label="@string/title_activity_signup"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="ru.club.sfera.MainActivity"
+            android:name=".MainActivity"
             android:configChanges="orientation"
-            android:windowSoftInputMode="stateHidden"
-            android:label="@string/title_activity_feeds" />
+            android:label="@string/title_activity_feeds"
+            android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="ru.club.sfera.RecoveryActivity"
+            android:name=".RecoveryActivity"
             android:label="@string/title_activity_recovery"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="ru.club.sfera.SettingsActivity"
+            android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
         <activity
-            android:name="ru.club.sfera.WebViewActivity"
+            android:name=".WebViewActivity"
             android:label="@string/title_activity_web_view" />
         <activity
-            android:name="ru.club.sfera.ChangePasswordActivity"
+            android:name=".ChangePasswordActivity"
             android:label="@string/title_activity_change_password"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="ru.club.sfera.ServicesActivity"
+            android:name=".ServicesActivity"
             android:label="@string/title_activity_services" />
         <activity
-            android:name="ru.club.sfera.NewItemActivity"
+            android:name=".NewItemActivity"
             android:label="@string/title_activity_new_item" />
         <activity
-            android:name="ru.club.sfera.ViewItemActivity"
+            android:name=".ViewItemActivity"
             android:label="@string/title_activity_view_item"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="ru.club.sfera.ProfileActivity"
+            android:name=".ProfileActivity"
             android:configChanges="orientation"
             android:label="@string/title_activity_profile" />
         <activity
-            android:name="ru.club.sfera.SearchActivity"
+            android:name=".SearchActivity"
             android:label="@string/title_activity_search">
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
         <activity
-            android:name="ru.club.sfera.NotificationsActivity"
+            android:name=".NotificationsActivity"
             android:label="@string/title_activity_notifications" />
         <activity
-            android:name="ru.club.sfera.PhotoViewActivity"
+            android:name=".PhotoViewActivity"
             android:label="@string/title_activity_photo_view"
             android:theme="@style/PhotoViewTheme" />
         <activity
-            android:name="ru.club.sfera.VideoViewActivity"
+            android:name=".VideoViewActivity"
             android:label="@string/title_activity_video_view"
             android:theme="@style/PhotoViewTheme" />
         <activity
-            android:name="ru.club.sfera.HashtagsActivity"
+            android:name=".HashtagsActivity"
             android:label="@string/title_activity_hashtags" />
         <activity
-            android:name="ru.club.sfera.FollowersActivity"
+            android:name=".FollowersActivity"
             android:label="@string/title_activity_followers" />
         <activity
-            android:name="ru.club.sfera.LikesActivity"
+            android:name=".LikesActivity"
             android:label="@string/title_activity_likes" />
         <activity
-            android:name="ru.club.sfera.LikersActivity"
+            android:name=".LikersActivity"
             android:label="@string/title_activity_likers" />
         <activity
-            android:name="ru.club.sfera.AccountSettingsActivity"
+            android:name=".AccountSettingsActivity"
             android:label="@string/title_activity_account_settings"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="ru.club.sfera.BlackListActivity"
+            android:name=".BlackListActivity"
             android:label="@string/title_activity_black_list" />
         <activity
-            android:name="ru.club.sfera.DialogsActivity"
+            android:name=".DialogsActivity"
             android:label="@string/title_activity_dialogs" />
         <activity
-            android:name="ru.club.sfera.ChatActivity"
+            android:name=".ChatActivity"
             android:label="@string/title_activity_chat"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="ru.club.sfera.NotificationsSettingsActivity"
+            android:name=".NotificationsSettingsActivity"
             android:label="@string/title_activity_notifications_settings" />
         <activity
-            android:name="ru.club.sfera.PrivacySettingsActivity"
+            android:name=".PrivacySettingsActivity"
             android:label="@string/title_activity_privacy_settings" />
         <activity
-            android:name="ru.club.sfera.FavoritesActivity"
+            android:name=".FavoritesActivity"
             android:label="@string/title_activity_favorites"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.SupportActivity"
+            android:name=".SupportActivity"
             android:label="@string/title_activity_support"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.LocationActivity"
+            android:name=".LocationActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/title_activity_location"
             android:screenOrientation="portrait"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.DeactivateActivity"
+            android:name=".DeactivateActivity"
             android:label="@string/title_activity_deactivate"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.AddPhotoActivity"
+            android:name=".AddPhotoActivity"
             android:label="@string/title_activity_new_photo"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.GalleryActivity"
+            android:name=".GalleryActivity"
             android:label="@string/title_activity_gallery"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.VideoGalleryActivity"
+            android:name=".VideoGalleryActivity"
             android:label="@string/title_activity_video_gallery"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.AddVideoActivity"
+            android:name=".AddVideoActivity"
             android:label="@string/title_activity_new_video"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.ViewImageActivity"
+            android:name=".ViewImageActivity"
             android:label="@string/title_activity_view_image"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.ViewVideoActivity"
+            android:name=".ViewVideoActivity"
             android:label="@string/title_activity_view_video"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.ManagedGroupsActivity"
+            android:name=".ManagedGroupsActivity"
             android:label="@string/title_activity_managed_groups"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.NewGroupActivity"
+            android:name=".NewGroupActivity"
             android:label="@string/title_activity_new_group"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.GroupActivity"
+            android:name=".GroupActivity"
             android:label="@string/title_activity_group"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.GroupSettingsActivity"
+            android:name=".GroupSettingsActivity"
             android:label="@string/title_activity_settings"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.GroupSearchActivity"
+            android:name=".GroupSearchActivity"
             android:label="@string/title_activity_search">
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-
         <activity
-            android:name="ru.club.sfera.BalanceActivity"
+            android:name=".BalanceActivity"
             android:label="@string/title_activity_balance"
             android:screenOrientation="portrait"
-            android:theme="@style/MyMaterialTheme">
-        </activity>
-
+            android:theme="@style/MyMaterialTheme"></activity>
         <activity
-            android:name="ru.club.sfera.SendGiftActivity"
+            android:name=".SendGiftActivity"
             android:label="@string/title_activity_send_gift"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.GiftsActivity"
+            android:name=".GiftsActivity"
             android:label="@string/title_activity_gifts"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.FriendsActivity"
+            android:name=".FriendsActivity"
             android:label="@string/title_activity_friends"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.WelcomeActivity"
-            android:label="@string/title_activity_welcome"/>
+            android:name=".WelcomeActivity"
+            android:label="@string/title_activity_welcome" />
         <activity
-            android:name="ru.club.sfera.ReferralsActivity"
+            android:name=".ReferralsActivity"
             android:label="@string/title_activity_referrals"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.MarketNewItemActivity"
+            android:name=".MarketNewItemActivity"
             android:label="@string/title_activity_market_new_item"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.MarketViewItemActivity"
+            android:name=".MarketViewItemActivity"
             android:label="@string/title_activity_market_view_item"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.MarketMyItemsActivity"
+            android:name=".MarketMyItemsActivity"
             android:label="@string/title_activity_market_my_items"
             android:theme="@style/MyMaterialTheme" />
         <activity
-            android:name="ru.club.sfera.ViewYouTubeVideoActivity"
+            android:name=".ViewYouTubeVideoActivity"
             android:label="@string/title_activity_view_youtube_video"
             android:theme="@style/MyMaterialTheme" />
-
         <activity
-            android:name="ru.club.sfera.MarketActivity"
+            android:name=".MarketActivity"
             android:label="@string/title_activity_market"
             android:theme="@style/MyMaterialTheme" />
-
         <activity
-            android:name="ru.club.sfera.StreamActivity"
+            android:name=".StreamActivity"
             android:label="@string/title_activity_stream"
             android:theme="@style/MyMaterialTheme" />
-
         <activity
-            android:name="ru.club.sfera.GuestsActivity"
+            android:name=".GuestsActivity"
             android:label="@string/title_activity_guests"
             android:theme="@style/MyMaterialTheme" />
-
         <activity
-            android:name="ru.club.sfera.GroupsActivity"
+            android:name=".GroupsActivity"
             android:label="@string/title_activity_groups"
             android:theme="@style/MyMaterialTheme" />
-
         <activity
-            android:name="ru.club.sfera.NearbyActivity"
+            android:name=".NearbyActivity"
             android:label="@string/title_activity_nearby"
             android:theme="@style/MyMaterialTheme" />
-
         <activity
-            android:name="ru.club.sfera.UpgradesActivity"
+            android:name=".UpgradesActivity"
             android:label="@string/title_activity_upgrades"
             android:theme="@style/MyMaterialTheme" />
-
         <activity
-            android:name="ru.club.sfera.PopularActivity"
+            android:name=".PopularActivity"
             android:label="@string/title_activity_popular"
             android:theme="@style/MyMaterialTheme" />
-
         <activity
-            android:name="ru.club.sfera.RegisterActivity"
-            android:label="@string/title_activity_signup"/>
-
-        <activity android:name="ru.club.sfera.MediaViewerActivity" />
-
+            android:name=".RegisterActivity"
+            android:label="@string/title_activity_signup" />
+        <activity android:name=".MediaViewerActivity" />
     </application>
 
 </manifest>

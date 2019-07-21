@@ -253,7 +253,7 @@
     <string name="settings_account_id">account_id</string>
     <string name="settings_account_username">account_username</string>
     <string name="settings_account_access_token">access_token</string>
-
+    <string name="nav_music">Music</string>
     <string name="page_1">Profile</string>
     <string name="page_2">Feed</string>
     <string name="page_3">Stream</string>

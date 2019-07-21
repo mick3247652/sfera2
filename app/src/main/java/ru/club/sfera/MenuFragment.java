@@ -29,7 +29,7 @@ public class MenuFragment extends Fragment implements Constants {
 
     private ImageView mNavGalleryIcon, mNavGroupsIcon, mNavFriendsIcon, mNavGuestsIcon, mNavMarketIcon, mNavNearbyIcon, mNavFavoritesIcon, mNavStreamIcon, mNavPopularIcon, mNavUpgradesIcon, mNavSettingsIcon;
 
-    private MaterialRippleLayout mNavGallery, mNavGroups, mNavStream, mNavFriends, mNavMarket, mNavGuests, mNavFavorites, mNavNearby, mNavPopular, mNavUpgrades, mNavSettings;
+    private MaterialRippleLayout mNavMusic, mNavGallery, mNavGroups, mNavStream, mNavFriends, mNavMarket, mNavGuests, mNavFavorites, mNavNearby, mNavPopular, mNavUpgrades, mNavSettings;
 
     public MenuFragment() {
         // Required empty public constructor
@@ -63,6 +63,7 @@ public class MenuFragment extends Fragment implements Constants {
         mNavPopular = (MaterialRippleLayout) rootView.findViewById(R.id.nav_popular);
         mNavUpgrades = (MaterialRippleLayout) rootView.findViewById(R.id.nav_upgrades);
         mNavSettings = (MaterialRippleLayout) rootView.findViewById(R.id.nav_settings);
+        mNavMusic = (MaterialRippleLayout) rootView.findViewById(R.id.nav_music);
 
         // Counters
 
@@ -114,6 +115,18 @@ public class MenuFragment extends Fragment implements Constants {
 
                 Intent i = new Intent(getActivity(), GalleryActivity.class);
                 i.putExtra("profileId", App.getInstance().getId());
+                getActivity().startActivity(i);
+            }
+        });
+
+        mNavMusic.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(getActivity(), WebViewActivity.class);
+                i.putExtra("url", "https://5music.online");
+                i.putExtra("title", getActivity().getResources().getString(R.string.nav_music));
                 getActivity().startActivity(i);
             }
         });

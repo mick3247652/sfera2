@@ -272,6 +272,7 @@
 
     <string name="nav_feed">Стена</string>
     <string name="nav_stream">Лента</string>
+    <string name="nav_music">Музыка</string>
     <string name="nav_nearby">Рядом с вами</string>
     <string name="nav_favorites">Избранное</string>
     <string name="nav_notifications">Уведомления</string>

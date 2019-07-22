@@ -13,7 +13,7 @@ public interface Constants {
 
     public static final Boolean FACEBOOK_AUTHORIZATION = false; // Allow login, signup with Facebook and "Services" section in Settings
     public static final Boolean UPGRADES_FEATURE = false; // Allow marketplace upgrades feature
-    public static final Boolean MARKETPLACE_FEATURE = false; // Allow marketplace feature
+    public static final Boolean MARKETPLACE_FEATURE = true; // Allow marketplace feature
 
     public static final Boolean EMOJI_KEYBOARD = true; // false = Do not display your own Emoji keyboard | true = allow display your own Emoji keyboard
 

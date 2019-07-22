@@ -88,7 +88,6 @@
                 </LinearLayout>
             </com.balysv.materialripple.MaterialRippleLayout>
 
-
             <com.balysv.materialripple.MaterialRippleLayout
                 style="@style/RippleStyleBlack"
                 android:id="@+id/nav_gallery"

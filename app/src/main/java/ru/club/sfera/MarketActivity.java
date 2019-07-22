@@ -21,6 +21,12 @@ public class MarketActivity extends ActivityBase {
 
     private Boolean restore = false;
 
+    private WebViewFragment createWebViewFragment(String url){
+        WebViewFragment f = new WebViewFragment();
+        f.setURL(url);
+        return f;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -39,19 +45,22 @@ public class MarketActivity extends ActivityBase {
 
         // Toolbar
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar = (Toolbar) findViewById(R.id.toolbarMarket);
 
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setTitle(getResources().getString(R.string.title_market));
 
         // ViewPager
 
         mViewPager = (ViewPager) findViewById(R.id.view_pager);
 
         adapter = new SectionsPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new MarketFragment(), getString(R.string.tab_market));
-        adapter.addFragment(new MarketMyItemsFragment(), getString(R.string.tab_my_products));
+        //adapter.addFragment(new MarketFragment(), getString(R.string.tab_market));
+        //adapter.addFragment(new MarketMyItemsFragment(), getString(R.string.tab_my_products));
+        adapter.addFragment(createWebViewFragment("http://lenta.ru"), "lenta.ru");
+        adapter.addFragment(createWebViewFragment("http://russian.rt.com"), "RT");
         mViewPager.setAdapter(adapter);
         mViewPager.setCurrentItem(0);
 
